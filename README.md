@@ -19,4 +19,12 @@ docker compose build \
     && docker compose logs -f 
 ```
 
-This starts the jupyter project in the background
+This starts the jupyter project in the background. If you need to restart, add `docker compose down`. For a quick rebuild and run, this is the command:
+
+```
+docker compose down \
+    && docker compose build \
+    && docker compose up my_project_jupyter \
+    && docker compose logs -f 
+```
+
