@@ -5,7 +5,7 @@
 	"build": {
 		// Path is relative to the devcontainer.json file.
 		"context": "..",
-		"dockerfile": "Dockerfile",
+		"dockerfile": "Dockerfile"
 	},
 	"features": {},
 	"customizations": {
