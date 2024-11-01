@@ -1,4 +1,5 @@
 git+https://github.com/davidbau/baukit
+accelerate
 dataclasses-json
 protobuf 
 types-requests 
@@ -8,6 +9,7 @@ statsmodels
 huggingface-hub
 invoke
 jupyter
+jupyter_http_over_ws
 matplotlib
 numpy
 protobuf==3.20.0
