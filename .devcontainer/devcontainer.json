@@ -29,9 +29,10 @@
 		"HF_HOME": "/home/${localEnv:USER}/.cache"
 	},
 	"mounts": [
-		"source=${localEnv:HOME},target=/home/${localEnv:USER},type=bind,consistency=cached",
 		// Shared data directory
 		"source=/mnt/raid/data/,target=/shared-data,type=bind,consistency=cached",
+		// Cache directory. Useful for huggingface models
+		"source=${localEnv:HOME}/.chache,target=/home/${localEnv:USER}/.cache,type=bind,consistency=cached",
 		// Perist bash history
 		"source=projectname-bashhistory,target=/commandhistory,type=volume"
 	]
