@@ -1,0 +1,27 @@
+git+https://github.com/davidbau/baukit
+dataclasses-json
+protobuf 
+types-requests 
+h5py
+python-dotenv
+statsmodels
+huggingface-hub
+invoke
+jupyter
+matplotlib
+numpy
+protobuf==3.20.0
+requests
+seaborn
+sentencepiece
+tqdm
+transformers
+torch
+plotly
+
+# dev dependencies
+black
+isort
+mypy
+pytest
+types-requests
