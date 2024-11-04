@@ -8,6 +8,7 @@ This repo is setup to use VSCode and the Dev Containers plugin. Please make sure
 1. Create a repository from this template following [these instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 2. Checkout the folder, and open it in VSCode.
     1. You'll see a popup asking whether you want to reopen in a Dev Container. Choose OK.
+        - Alternatively, type Ctrl+Shift+P (or Cmd+Shift+P on a Mac) and choose Dev Containers: Reopen In Container.
     2. If this is the first time building, it may take several minutes to start up. In this case, it's a good idea to watch the logs to see the progress (click on the popup window).
 3. Rename the folder `my_project` to a python package name, e.g., `my_project_new`.
 4. Find and replace `my_project` with `my_project_new`.
