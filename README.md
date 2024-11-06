@@ -63,3 +63,22 @@ For the details on this, see [`.devcontainer/devcontainer.json](.devcontainer/de
 For project and user-specific data, we recommend storing the data in the `./data/` directory. By default, all files in there will be ignored by `git`, so you won't accidentally commit large files to the repo.
 
 For data that needs to be shared between users or projects, we recommend creating `/shared-data/<project>` in the container, which corresponds to `/mnt/raid/data/<project>` on the server. 
+
+
+### Tests
+
+We strongly encourage you to write tests for your code. We've included an example file to get you started with python tests. The basic pattern is, for each python file `my_file.py`, create a `my_file_test.py`. Then you can run tests using the `pytest` framework with `pytest`:
+
+
+```
+$ pytest .
+====================== test session starts ======================
+platform linux -- Python 3.12.7, pytest-8.3.3, pluggy-1.5.0
+rootdir: /workspaces/rc-lab-template
+plugins: anyio-4.6.2.post1
+collected 1 item                                                
+
+my_project/example_test.py .                              [100%]
+
+======================= 1 passed in 0.02s =======================
+```
