@@ -1,9 +1,11 @@
 black
+chex
 dataclasses-json
+flax
 h5py
 huggingface-hub
 isort
-jax
+jax[cuda12]
 jupyter
 jupyter_http_over_ws
 matplotlib

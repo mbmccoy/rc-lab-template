@@ -1,3 +1,15 @@
+# If you edit this file, you'll need to run 
+#    pip install -r requirements.txt
+# to install the packages. You can also consider rebuilding 
+# the dev container by running the command: 
+# 
+#   `Remote-Containers: Rebuild and Reopen in Container`
+# 
+# from the command palette (F1 or Ctrl+Shift+P). Note that this will
+# stop running processes like Jupyter notebooks.
+#
+# Rebuilding the dev container ensures that your changes are
+# reproducible and that the dev container is up-to-date.
 git+https://github.com/davidbau/baukit
 accelerate
 dataclasses-json
