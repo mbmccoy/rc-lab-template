@@ -66,12 +66,27 @@ If you need other tools available, edit the `.devcontainer/install-packages.sh` 
 
 Once the script runs successfully, you can rebuild the container by pressing `Cmd+Shift+P` (`Ctrl+Shift+P` on Windows/Linux) and selecting `Dev Containers: Rebuild Container`.
 
-## Where Are My Files?
 
-A Dev Container is like a "computer within a computer," which can be a bit confusing. The main advantage of this approach is that your code is isolated and easier to reproduce in the future because you keep track of your dependencies explicitly, and your changes are isolated from the server running the container.
+## Where are my files?
 
-The downside of this isolation is that your files may be harder to find and share. To make things easier, the Dev Container shares a few
+A dev container is a "computer-in-a-computer", which can get a bit confusing. The main advantage of this approach to development is that your code is isolated and much easier to reproduce in the future because you keep track of your dependencies explicitly (see above), and your changes are isolated from the server that's running the container.
 
-## Installing new tools
+The downside of this isolation is, well, isolation---your files may be harder to find and share. To make things a bit easier, we've set up the dev container to share a few files.
 
-To update your dev container and persist the changes, edit the files 
+| What is it?           | On the server   | Inside the container | Notes                     |
+|-----------------------|-----------------|----------------------|---------------------------|
+| This directory (code) | `/path/to/code` | `/workspace/code`    | Changes to code will be kept in sync with the host machine. Use git to store changes, etc.
+| Home directory     | `$HOME` | Not available, except the code directory above. | This is a best-practice convention to help keep projects and data isolated, but see below.
+| Shared data | `/mnt/raid/data` | `/shared-data` | This is a folder that any user and projet can read and write to. Since it's a shared data folder, care must be taken to ensure that you don't have name conflicts between projects.
+
+For the details on this, see [`.devcontainer/devcontainer.json](.devcontainer/devcontainer.json).
+
+### Adding new volume mounts
+
+If you need to mount additional directories into the dev container, you can edit the `mounts` section of the `.devcontainer/devcontainer.json` file. For example, to mount the `data` directory, you could add the following:
+
+```json
+"mounts": [
+  "source=/path/to/data,target=/workspace/data,type=cached"
+]
+```
