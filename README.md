@@ -10,8 +10,7 @@ This repo is setup to use VSCode and the Dev Containers plugin. Please make sure
     1. You'll see a popup asking whether you want to reopen in a Dev Container. Choose OK.
         - Alternatively, type Ctrl+Shift+P (or Cmd+Shift+P on a Mac) and choose Dev Containers: Reopen In Container.
     2. If this is the first time building, it may take several minutes to start up. In this case, it's a good idea to watch the logs to see the progress (click on the popup window).
-3. Rename the folder `my_project` to a python package name, e.g., `my_project_new`.
-4. Find and replace `my_project` with `my_project_new`.
+4. Find and replace `my_project` with `my_specific_project_name`.
 5. Copy the `.env.template` file to `.env` and edit the contents with your values.
 
 ## Examples
@@ -78,7 +77,7 @@ rootdir: /workspaces/rc-lab-template
 plugins: anyio-4.6.2.post1
 collected 1 item                                                
 
-my_project/example_test.py .                              [100%]
+src/example_test.py .                              [100%]
 
 ======================= 1 passed in 0.02s =======================
 ```

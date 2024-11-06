@@ -1,4 +1,4 @@
-from my_project.example import example
+from src.example import example
 
 
 def test_example():
